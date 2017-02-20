@@ -1,2 +1,3 @@
 # SimpleDrone
-Hexacopter firmware project
+A simple hexacopter firmware project...
+...at initial development process.
