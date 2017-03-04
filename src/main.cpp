@@ -1,8 +1,9 @@
 //INCLUDES
+#include <Arduino.h>
 #include "_settings.h"
 #include "_types.h"
-#include <Thread.h>
-#include <ThreadController.h>
+#include "Thread.h"
+#include "ThreadController.h"
 #include "Battery.h"
 #include "SerialDebug.h"
 #include "Motors.h"
@@ -17,8 +18,7 @@ Thread _motors;
 
 
 //SETUP
-void setup()
-{
+void setup(){
 	_battery.setInterval(BATTERY_RUN_INTERVAL);
 	_battery.onRun(Battery::run);
 	_serialDebug.setInterval(SERIALDEBUG_RUN_INTERVAL);
@@ -36,7 +36,6 @@ void setup()
 }
 
 //LOOP
-void loop()
-{
+void loop(){
 	_cpu.run();
 }

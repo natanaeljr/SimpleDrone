@@ -1,10 +1,10 @@
-#pragma once
+#ifndef _SETTINGS_H
 #define _SETTINGS_H
 
 #include <Arduino.h>
 
 //PROJECT**********************************************************************
-#define PROJECT "-->> Running DroneBeta_v0.1 ..."
+#define PROJECT "-->> Running SimpleDrone..."
 
 
 //DEBUG SERIAL*****************************************************************
@@ -95,3 +95,5 @@ const int MOTOR_PIN[NUM_MOTORS] = {
 	MOTOR_5_PIN,
 	MOTOR_6_PIN
 };
+
+#endif //_SETTINGS_H

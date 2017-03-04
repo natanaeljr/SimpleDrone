@@ -1,4 +1,5 @@
 #include "SerialDebug.h"
+#include "Motors.h"
 
 //PRIVATE
 bool SerialDebug::ready = false;
@@ -6,7 +7,7 @@ bool SerialDebug::ready = false;
 //PUBLIC
 void SerialDebug::initialize(){
 	Serial.begin(UART_BAUD_RATE);
-	while(!Serial);
+	//while(!Serial);
 	log(PROJECT);
 	ready = true;
 }
@@ -27,7 +28,7 @@ void SerialDebug::run(){
 	if(data != 'P') return;
 	int pin = Serial.parseInt();
 
-	
+
 	//escreve saida PWM
 	analogWrite(MOTOR_PIN[pin], level);
 	//for(int i=0; i<NUM_MOTORS; i++)
