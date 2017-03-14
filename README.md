@@ -8,9 +8,10 @@ at initial development process.
 
 <img src="https://raw.githubusercontent.com/natanael7/gh-assets/master/SimpleDrone/photos/img1.jpg" width="750">
 
+*making the pcb:*  
 <img src="https://raw.githubusercontent.com/natanael7/gh-assets/master/SimpleDrone/photos/img2.jpg" width="250">
 <img src="https://raw.githubusercontent.com/natanael7/gh-assets/master/SimpleDrone/photos/img4.jpg" width="250">
-<img src="https://raw.githubusercontent.com/natanael7/gh-assets/master/SimpleDrone/photos/img3.jpg" width="250">
+<img src="https://raw.githubusercontent.com/natanael7/gh-assets/master/SimpleDrone/photos/img5.jpg" width="250">
 
 ---
 
