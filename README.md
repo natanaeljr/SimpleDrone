@@ -20,7 +20,7 @@ at initial development process.
 
 ## Frame
 
-... drawing 3d model ...
+... ...
 
 ---
 
