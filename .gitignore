@@ -1,8 +1,0 @@
-### PlataformIO ###
-.pioenvs
-.piolibdeps
-.clang_complete
-.gcc-flags.json
-lib/readme.txt
-
-### Others ###
