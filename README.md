@@ -2,11 +2,13 @@
 A simple hexacopter firmware project...
 at initial development process.
 
+<img src="https://raw.githubusercontent.com/natanaeljr/gh-assets/master/SimpleDrone/photos/img6.jpg" width="800">
+
 ---
 
 ## Board
 
-<img src="https://raw.githubusercontent.com/natanaeljr/gh-assets/master/SimpleDrone/photos/img1.jpg" width="600">
+<img src="https://raw.githubusercontent.com/natanaeljr/gh-assets/master/SimpleDrone/photos/img1.jpg" width="400">
 
 **manufacturing:**
 
