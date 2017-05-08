@@ -76,6 +76,12 @@ void MPU::read()
 	if(!mpuIntStatus && fifoCount < packetSize)
 		return;
 
+	if(mpuIntStatus & 0x10){
+		mpu6050.resetFIFO();
+		logWarn(F("MPU FIFO Overflow!"));
+		return;
+	}
+	
 	if(mpuIntStatus & 0x02){
 		while (fifoCount < packetSize) 
 			fifoCount = mpu6050.getFIFOCount(); //***see dmpPacketAvailable();
@@ -101,10 +107,5 @@ void MPU::read()
 
 	}
 
-	if(mpuIntStatus & 0x10){
-		mpu6050.resetFIFO();
-		logWarn(F("MPU FIFO Overflow!"));
-		return;
-	}
 
 }

@@ -104,7 +104,7 @@ void ModuleManager::setup()
 	Module::setup();
 
 	for(int i = 0; i < cached_size; i++)
-		if(module[i])
+		if(module[i] && module[i]->enabled)
 			module[i]->setup();
 }
 
@@ -113,7 +113,7 @@ void ModuleManager::init()
 	Module::init();
 
 	for(int i = 0; i < cached_size; i++)
-		if(module[i])
+		if(module[i] && module[i]->enabled)
 			module[i]->init();
 }
 

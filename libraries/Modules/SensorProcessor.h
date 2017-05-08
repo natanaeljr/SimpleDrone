@@ -1,7 +1,7 @@
 #pragma once
 #define __SENSORPROCESSOR_H__
-#include "Module.h"
-#include "MPU.h"
+#include <Module.h>
+#include <MPU.h>
 // #include "Compass.h"
 // #include "Barometer.h"
 
@@ -27,3 +27,5 @@ public:
 
 	
 };
+
+extern SensorProcessor _sensorprocessor;

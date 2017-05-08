@@ -59,6 +59,5 @@ void Debuger::run()
 
 
 
-
 	runned();
 }

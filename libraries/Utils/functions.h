@@ -1,5 +1,6 @@
 #pragma once
 #define __FUNCTIONS_H__
+#include <Arduino.h>
 #include <settings.h>
 
 /****************************************************************************************

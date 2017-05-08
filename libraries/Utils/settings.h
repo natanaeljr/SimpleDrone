@@ -1,3 +1,4 @@
+
 #ifndef __SETTINGS_H__
 #define __SETTINGS_H__
 
@@ -19,6 +20,7 @@
 #define ENABLE_SERIALDEBUG 1
 #define ENABLE_STARTUP_MOTOR_MELODY 1
 #define ENABLE_DEBUG_MPUDATA 0
+#define ENABLE_DEBUG_PID 1
 
 
 
@@ -63,7 +65,7 @@
 /****************************************************************************************
  * IC2
 *****************************************************************************************/
-#define I2C_SPEED 200000L
+#define I2C_SPEED 400000L
 
 
 
@@ -109,7 +111,7 @@
 #define MOTOR_4_PIN 6
 #define MOTOR_5_PIN 5
 #define MOTOR_6_PIN 3
-#define MOTOR_PWM_MAX 255
+#define MOTOR_PWM_MAX 20
 #define MOTOR_PWM_MIN 0
 const uint8_t MOTOR_PIN[NUM_MOTORS] = {
 	MOTOR_1_PIN,
@@ -124,9 +126,9 @@ const uint8_t MOTOR_PIN[NUM_MOTORS] = {
 
 
 /****************************************************************************************
- * 
+ * PID
 *****************************************************************************************/
-
+#define MAX_ROLL_ANGLE 60
 
 
 

@@ -1,9 +1,10 @@
 #pragma once
 #define __MOTORSDRIVER_H__
-#include "Module.h"
-#include "Motor.h"
+#include <Module.h>
+#include <Motor.h>
 #include <settings.h>
 #include <inttypes.h>
+
 
 
 
@@ -18,7 +19,7 @@ public:
 	void setup();
 	void init();
 	void run();
-
-	void setOutput(uint8_t *value);
 	
 };
+
+extern MotorsDriver _motorsdriver;

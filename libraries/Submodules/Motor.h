@@ -12,6 +12,6 @@ private:
 public:
 	Motor(const uint8_t _pin);
 	void setup();
-	void write(uint8_t value);
+	void write(uint8_t pwm);
 	
 };

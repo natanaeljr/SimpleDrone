@@ -1,39 +1,47 @@
 #include "SimpleDrone.h"
 #include <functions.h>
+//MODULES
+#include <ModuleManager.h>
+#include <Debuger.h>
+#include <PowerManager.h>
+#include <Communicator.h>
+#include <SensorProcessor.h>
+#include <Stabilizer.h>
+#include <MotorsDriver.h>
 
 
-
-//INSTANTIATE MODULES (thread interval)
-ModuleManager 	MANAGER(0);
+//Instatiate MODULES (thread interval)
+ModuleManager 	_moduleManager	(0);
 #if ENABLE_SERIALDEBUG
-	Debuger 	DEBUGER(50);
+	Debuger 	_debuger		(50);
 #endif
-PowerManager 	POWERMANAGER(10000);
-Communicator 	COMMUNICATOR(1000);
-SensorProcessor SENSORPROCESSOR(2);
-Stabilizer 		STABILIZER(5);
-MotorsDriver 	MOTORSDRIVER(5);
+PowerManager 	_powerManager	(8000);
+Communicator 	_communicator	(1000);
+SensorProcessor _sensorprocessor(2);  // 500Hz
+Stabilizer 		_stabilizer		(10); // 250Hz
+MotorsDriver 	_motorsdriver	(10); // 250Hz
 
 
 
 
 // Add Modules to ModuleManager, setup and initialize them
-void SimpleDrone(void) 
-{
+void SimpleDrone(void)
+{	
+	_communicator.enabled = false;
 
 	#if ENABLE_SERIALDEBUG
-		MANAGER.add(&DEBUGER);
+		_moduleManager.add(&_debuger);
 	#endif
-	MANAGER.add(&POWERMANAGER);
-	MANAGER.add(&COMMUNICATOR);
-	MANAGER.add(&SENSORPROCESSOR);
-	MANAGER.add(&STABILIZER);
-	MANAGER.add(&MOTORSDRIVER);
+	_moduleManager.add(&_powerManager);
+	_moduleManager.add(&_communicator);
+	_moduleManager.add(&_sensorprocessor);
+	_moduleManager.add(&_stabilizer);
+	_moduleManager.add(&_motorsdriver);
 
 	logDebug(F("> SETUP MODULES"));
-	MANAGER.setup();
+	_moduleManager.setup();
 	logDebug(F("> INIT MODULES"));
-	MANAGER.init();
+	_moduleManager.init();
 
 }
 
@@ -43,5 +51,5 @@ void SimpleDrone(void)
 void SimpleDroneRun(void)
 {
 	while(true)
-		MANAGER.run();
+		_moduleManager.run();
 }

@@ -1,7 +1,8 @@
 #pragma once
 #define __DEBUGER_H__
-#include "Module.h"
+#include <Module.h>
 #include <settings.h>
+
 
 
 
@@ -22,6 +23,7 @@ public:
 	
 };
 
+extern Debuger _debuger;
 
 
 /*

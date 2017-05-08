@@ -1,16 +1,16 @@
 #include "MotorsDriver.h"
-#include "Motor.h"
+#include <Motor.h>
 #include <settings.h>
-#include <inttypes.h>
+#include <Stabilizer.h>
 
 
 
 MotorsDriver::MotorsDriver(unsigned long _interval) : Module(_interval)
 {
+	moduleName = F("MotorsDriver ");
 	for(char i = 0; i < NUM_MOTORS; i++){
 		motor[i] = new Motor(MOTOR_PIN[i]);
 	}
-	moduleName = F("MotorsDriver ");
 }
 
 
@@ -20,7 +20,6 @@ void MotorsDriver::setup()
 
 	for(char i = 0; i < NUM_MOTORS; i++)
 		motor[i]->setup();
-
 }
 
 
@@ -35,20 +34,13 @@ void MotorsDriver::init()
 			motor[i]->write(0);
 		}
 	#endif
-
 }
 
 
 void MotorsDriver::run()
 {
-
+	for (uint8_t i = 0; i < NUM_MOTORS; i++)
+		motor[i]->write(_stabilizer.getPwm(i));
 
 	runned();
-}
-
-
-void MotorsDriver::setOutput(uint8_t *value)
-{
-	for (int i = 0; i < NUM_MOTORS; i++)
-		motor[i]->write(value[i]);
 }

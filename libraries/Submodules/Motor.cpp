@@ -17,7 +17,7 @@ void Motor::setup()
 }
 
 
-void Motor::write(uint8_t value)
+void Motor::write(uint8_t pwm)
 {
-	analogWrite(pin, value);
+	analogWrite(pin, pwm);
 }

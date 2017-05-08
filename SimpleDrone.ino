@@ -25,9 +25,7 @@ void setup()
 	SimpleDrone();
 
 	logDebug2(F("--- free SRAM = "), freeRam());
-	logDebug(F("> READY TO ROCK. RUN!\n")); 	
-	pinMode(7, OUTPUT); 
-	digitalWrite(7, HIGH);	
+	logDebug(F("> READY TO ROCK. RUN!\n"));
 
 }
 
@@ -57,16 +55,6 @@ README
 - The firmware is very OOP written, so it's not time-efficient for the MPU, the objective is to be quite well understandable
 - Delay is only allowed in setup() and init() methods of the modules. Please DO NOT place delays into run() methods.
 
-THREADS
-Thread Modules::_debuger; //displays info to Serial for debug purpose
-Thread Modules::_powermanager; //manages the power by checking the battery
-Thread Modules::_communicator; //intefaces with the wifi module to send/receive data
-Thread Modules::_motorsdriver; //outputs calculated PWM modulation to motors  //has Motor objects
-Thread Modules::_stabilizer; //calculates PID to output to motors with the data from commander
-Thread Modules::_commander; //calculates the target attitude through received commands of communicator and sets other states/modes
-Thread Modules::_attitude; //colects IMU data and analyzes it
-Thread Modules::_drone; //update led system and other things
-
 TODO
 - Write a sketch to evaluate oscillator calibration value
 - Add Thread/Module 'expected time' system for tests
@@ -81,5 +69,21 @@ CODING
 
 DEBUG
 KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK - 64 characters
+
+
+PID
+setPoint = 0 // which is the target angle
+error = readAngle - setpoint // so the error is the readAngle itself
+proportional_gain = 0.8
+integral_gain = 0.1
+derivative_gain = 0.1
+proportional = proportion_gain * error;
+integral = integral + (integral_gain * error);
+derivative = derivative_gain * (error - lastError);
+pid = proportional + integral + derivative;
+lastError = error;
+
+
+
 */
 

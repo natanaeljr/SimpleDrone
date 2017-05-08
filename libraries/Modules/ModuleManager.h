@@ -1,6 +1,6 @@
 #pragma once
 #define __MODULEMANAGER_H__
-#include "Module.h"
+#include <Module.h>
 #include <settings.h>
 
 
@@ -30,3 +30,5 @@ public:
 	void init();
 	
 };
+
+extern ModuleManager _moduleManager;

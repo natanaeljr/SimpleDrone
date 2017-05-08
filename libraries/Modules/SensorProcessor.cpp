@@ -41,17 +41,17 @@ void SensorProcessor::run()
 
 float SensorProcessor::getYaw()
 {
-	return mpu.ypr[0] * RAD_TO_DEG;
+	return degrees(mpu.ypr[0]);
 }
 
 
 float SensorProcessor::getPitch()
 {
-	return mpu.ypr[2] * RAD_TO_DEG;
+	return degrees(mpu.ypr[2]);
 }
 
 
 float SensorProcessor::getRoll()
 {
-	return mpu.ypr[1] * RAD_TO_DEG;
+	return degrees(mpu.ypr[1]);
 }

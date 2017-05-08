@@ -27,8 +27,14 @@ public:
 
 
 /*
-add array varible to store the name of the module (with PROGMEM)
-Create your own Thread library (more optimized :) )
+- Create new Thread library (faster and lighter)
+
+- Calculate elapsed time on Thread
+unsigned long finishTime = millis();
+if(finishTime - startTime > _interval) // or an "estimated running time"
+	logDebug2("Thread is taking longer than it should to run!");
+
+- Change interval to frequency (freq / 1000 = interval)
 
 
 */

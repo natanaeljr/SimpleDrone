@@ -1,7 +1,8 @@
 #pragma once
 #define __POWERMANAGER_H__
-#include "Module.h"
-#include "Battery.h"
+#include <Module.h>
+#include <Battery.h>
+
 
 
 
@@ -19,6 +20,7 @@ public:
 	
 };
 
+extern PowerManager _powermanager;
 
 
 

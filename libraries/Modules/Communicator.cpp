@@ -5,7 +5,7 @@
 
 
 
-Communicator::Communicator(unsigned long _interval = 0) : Module(_interval) 
+Communicator::Communicator(unsigned long _interval) : Module(_interval) 
 {
 	moduleName = F("Communicator ");
 }
