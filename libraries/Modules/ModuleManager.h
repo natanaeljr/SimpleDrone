@@ -1,7 +1,7 @@
 #pragma once
 #define __MODULEMANAGER_H__
 #include <Module.h>
-#include <settings.h>
+#include <defines.h>
 
 
 

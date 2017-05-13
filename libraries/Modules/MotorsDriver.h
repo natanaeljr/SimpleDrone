@@ -2,7 +2,7 @@
 #define __MOTORSDRIVER_H__
 #include <Module.h>
 #include <Motor.h>
-#include <settings.h>
+#include <defines.h>
 #include <inttypes.h>
 
 

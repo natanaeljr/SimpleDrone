@@ -15,7 +15,7 @@ ModuleManager 	_moduleManager	(0);
 #if ENABLE_SERIALDEBUG
 	Debuger 	_debuger		(50);
 #endif
-PowerManager 	_powerManager	(8000);
+PowerManager 	_powerManager	(100); // 10Hz
 Communicator 	_communicator	(1000);
 SensorProcessor _sensorprocessor(2);  // 500Hz
 Stabilizer 		_stabilizer		(10); // 250Hz

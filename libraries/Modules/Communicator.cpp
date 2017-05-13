@@ -1,7 +1,7 @@
 #include "Communicator.h"
 #include <SoftwareSerial.h>
 #include <functions.h>
-#include <settings.h>
+#include <defines.h>
 
 
 

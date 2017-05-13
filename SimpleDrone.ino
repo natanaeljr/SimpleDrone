@@ -1,6 +1,6 @@
 #include "SimpleDrone.h"
 #include <Arduino.h>
-#include <settings.h>
+#include <defines.h>
 #include <functions.h>
 
 
@@ -49,7 +49,6 @@ For example if the aircraft pitches down, it could be described as having a nose
 In this “attitude” the camera of a quadcopter would probably see only the ground and no sky.
 
 README
-- Put a question: let me know if this firmware was usefull for you.
 - To compile it, set the sketchbook folder on Arduino IDE to SimpleDrone folder.
 	That contains all of the libraries used, so as the hardware config (Atmega328 on a breadboard - 8Mhz internal clock).
 - The firmware is very OOP written, so it's not time-efficient for the MPU, the objective is to be quite well understandable

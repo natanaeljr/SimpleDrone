@@ -1,7 +1,7 @@
 #pragma once
 #define __FUNCTIONS_H__
 #include <Arduino.h>
-#include <settings.h>
+#include <defines.h>
 
 /****************************************************************************************
  * DEBUG SYSTEM

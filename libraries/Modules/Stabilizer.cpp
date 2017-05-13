@@ -1,5 +1,5 @@
 #include "Stabilizer.h"
-#include <settings.h>
+#include <defines.h>
 #include <functions.h>
 #include <SensorProcessor.h>
 #include <inttypes.h>

@@ -2,7 +2,7 @@
 #define __STABILIZER_H__
 #include <Module.h>
 #include <PID.h>
-#include <settings.h>
+#include <defines.h>
 #include <inttypes.h>
 
 

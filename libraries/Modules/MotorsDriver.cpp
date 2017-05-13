@@ -1,6 +1,6 @@
 #include "MotorsDriver.h"
 #include <Motor.h>
-#include <settings.h>
+#include <defines.h>
 #include <Stabilizer.h>
 
 

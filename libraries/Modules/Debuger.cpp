@@ -1,6 +1,6 @@
 #include "Debuger.h"
 #include <Arduino.h>
-#include <settings.h>
+#include <defines.h>
 #include <functions.h>
 
 

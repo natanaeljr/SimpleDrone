@@ -1,7 +1,7 @@
 #include "SensorProcessor.h"
 #include <Arduino.h>
 #include <Wire.h>
-#include <settings.h>
+#include <defines.h>
 
 
 
